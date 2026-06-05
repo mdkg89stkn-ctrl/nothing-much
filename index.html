@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Rehan Ashraf | Luxury Portfolio</title>
+<style>
+:root{--bg:#05070d;--card:rgba(255,255,255,.06);--text:#f8fafc;--muted:#94a3b8;--a:#4da3ff;--b:#8b5cf6}
+*{box-sizing:border-box} html{scroll-behavior:smooth}
+body{margin:0;font-family:Inter,Arial,sans-serif;background:var(--bg);color:var(--text)}
+body:before{content:"";position:fixed;inset:0;background:
+radial-gradient(circle at 20% 20%,rgba(77,163,255,.2),transparent 30%),
+radial-gradient(circle at 80% 30%,rgba(139,92,246,.2),transparent 30%);z-index:-1}
+nav{position:fixed;top:16px;left:50%;transform:translateX(-50%);width:min(95%,1100px);
+backdrop-filter:blur(20px);background:rgba(255,255,255,.05);padding:14px 24px;border-radius:999px}
+nav a{color:white;text-decoration:none;margin:0 10px}
+section{padding:90px 8%}
+.hero{min-height:100vh;display:grid;place-items:center;text-align:center}
+h1{font-size:clamp(3rem,9vw,7rem);margin:.2em 0}
+.card{background:var(--card);backdrop-filter:blur(18px);border-radius:24px;padding:24px}
+.grid{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+.btn{display:inline-block;padding:14px 22px;border-radius:999px;background:linear-gradient(135deg,var(--a),var(--b));color:white;text-decoration:none;margin:8px}
+.muted{color:var(--muted)}
+.reveal{opacity:0;transform:translateY(40px);transition:1s}
+.reveal.show{opacity:1;transform:none}
+footer{text-align:center;padding:50px;color:var(--muted)}
+</style>
+</head>
+<body>
+<nav>
+<a href="#about">About</a><a href="#skills">Skills</a><a href="#experience">Experience</a>
+<a href="#projects">Projects</a><a href="#contact">Contact</a>
+</nav>
+
+<section class="hero">
+<div>
+<div class="muted">Scientist • Leader • Artist</div>
+<h1>Rehan Ashraf<br></h1>
+<p class="muted">Student Leader, Analyst, Digital Designer, 1st Dan Black Belt, Researcher, Photographer, Sketch Artist, Sim Racer.</p>
+<a class="btn" href="#projects">View My Work</a>
+<a class="btn" href="#contact">Get In Touch</a>
+</div>
+</section>
+
+<section id="about" class="reveal">
+<h2>About Me</h2>
+<div class="card">
+<p>Navigating Organic Chemistry and Physics by day while exploring hypercars, photography, high‑performance hardware and fine art by night.</p>
+<p>Grade 12 PCBM student, Head Boy, 1st Dan Shotokan Karate Black Belt, competitive sim racer, photographer, sketch artist and yoga practitioner with strong endurance, flexibility and discipline.</p>
+</div>
+</section>
+
+<section id="skills" class="reveal">
+<h2>Skills & Expertise</h2>
+<div class="grid">
+<div class="card"><h3>Leadership</h3><p>Former Head Boy, Public Speaking, Event Coordination.</p></div>
+<div class="card"><h3>Science</h3><p>Biology Research, Microscopy, Data Analysis.</p></div>
+<div class="card"><h3>Creative</h3><p>Sketching, Photography, Visual Storytelling.</p></div>
+<div class="card"><h3>Technology</h3><p>Lightroom, Notion, Warp AI, Scratch.</p></div>
+<div class="card"><h3>Athletics</h3><p>Karate, Yoga, Tennis, Sim Racing.</p></div>
+</div>
+</section>
+
+<section id="experience" class="reveal">
+<h2>Experience</h2>
+<div class="grid">
+<div class="card"><h3>Head Boy (2025–2026)</h3><p>Student representation, speeches, publications, assemblies.</p></div>
+<div class="card"><h3>Lead Researcher (2026)</h3><p>Pollen morphology and microscopy project.</p></div>
+<div class="card"><h3>1st Dan Black Belt (2025)</h3><p>Shotokan Karate achievement.</p></div>
+</div>
+</section>
+
+<section id="projects" class="reveal">
+<h2>Featured Projects</h2>
+<div class="grid">
+<div class="card"><h3>Micromorphology Pollen Analysis</h3></div>
+<div class="card"><h3>Directed school assemblies </h3></div>
+<div class="card"><h3>Precision Graphic Documentation</h3></div>
+</div>
+</section>
+
+<section id="contact" class="reveal">
+<h2>Contact</h2>
+<div class="card">
+<p>Email: Available Upon Request</p>
+<p>LinkedIn • GitHub • Portfolio</p>
+<p>Phone: +974 55982141</p>
+</div>
+</section>
+
+<footer>
+<h3>Excellence is never accidental.</h3>
+<p>It is the result of discipline, precision, and continuous improvement.</p>
+</footer>
+
+<script>
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')}));
+document.querySelectorAll('.reveal').forEach(e=>io.observe(e));
+document.addEventListener('mousemove',e=>{
+document.body.style.backgroundPosition=`${e.clientX/50}px ${e.clientY/50}px`;
+});
+</script>
+</body>
+</html>
